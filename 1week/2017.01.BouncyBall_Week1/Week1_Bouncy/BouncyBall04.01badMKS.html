@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BouncyBall04.01badMKS units/controls </title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    	Please use a browser that supports "canvas"
+    </canvas> 
+	<br> 
+	<b>Particle System Controls:</b> <br>
+  <b>c or C key:</b> toggle clear-screen. <b>r/R key:</b> soft/hard reset. <b>Space-bar:</b> single-step.    <b>p or P key:</b> pause/resume.	 <br>
+	<b>d/D key:</b> less/more drag.  <b>g/G key:</b> less/more gravity 
+	<br>
+	<!-- Make 'div' elements to hold changeable HTML made in our JavaScript file;
+		 (where? look at the end of 'BouncyBall03.js' at 
+			myKeyPress(), myKeyDown() and myKeyUp() fcns)
+	-->
+	<p>
+		<div id='KeyResult'> try it... </div>
+		<div id='MouseResult0'> Then look here... </div> 
+		<div id='MouseResult1'> And look here too... </div>
+  </p>
+	<p>
+      <button type="button" onclick="onPlusButton()" >++Start</button>
+      <button type="button" onclick="onMinusButton()">--Start</button>
+		Buttons adjust 'r' or 'R' key strength <br>
+		Open Console, please (right-click-->'Inspect Element'-->'Console' tab) 		
+	</p>
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+	<!-- We modified the library cuon-matrix.js from the book 
+		"WebGL Programming Guide"(K. Matsuda, 2013),
+		to add matrix-stack and quaternion capabilities, 
+		and renamed it cuon-matrix-quat.js -->
+    <script src="../lib/cuon-matrix-quat.js"></script> 
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="BouncyBall04.01badMKS.js"></script>
+  </body>
+</html>

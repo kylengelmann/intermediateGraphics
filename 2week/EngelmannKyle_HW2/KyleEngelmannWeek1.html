@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BouncyBall05.SolveFloors </title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()" onresize="winResize()">
+    <canvas id="webgl" width="400" height="400">
+    	Please use a browser that supports "canvas"
+    </canvas> 
+	<br> 
+	<b>Particle System Controls:</b> <br>
+  <b>r/R key:</b> soft/hard reset. <b>Space-bar:</b> single-step. <b>p key:</b> pause/play particles. <br> <b>Note: particles begin paused, press play to start.</b><br><br>
+  <b>Camera Controls:</b> <br>
+  	<b>Mouse Drag:</b> pivot camera. <b>WASD keys:</b> move camera. <b>Q and E keys:</b> raise and lower camera. <b>Left Shift:</b> hold while moving to increase camera speed.
+
+
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="./lib/webgl-utils.js"></script>
+    <script src="./lib/webgl-debug.js"></script>
+    <script src="./lib/cuon-utils.js"></script>
+	<!-- We modified the library cuon-matrix.js from the book 
+		"WebGL Programming Guide"(K. Matsuda, 2013),
+		to add matrix-stack and quaternion capabilities, 
+		and renamed it cuon-matrix-quat.js -->
+    <script src="./lib/cuon-matrix-quat.js"></script> 
+    <script src="./scripts/particleSystem.js"></script> 
+    <script src="./scripts/Force.js"></script> 
+    <script src="./scripts/Keys.js"></script> 
+    <script src="./scripts/Controls.js"></script> 
+    <script src="./scripts/renderObject.js"></script> 
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="./scripts/bouncy.js"></script>
+  </body>
+</html>

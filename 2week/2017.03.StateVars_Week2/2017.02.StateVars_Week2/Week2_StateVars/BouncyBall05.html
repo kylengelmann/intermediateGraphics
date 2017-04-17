@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Particle05 Starter for NU's EECS 351-2 Course</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()">
+	Particle System Controls: <br>
+	r/R key: hard/soft restart. p or P key; run/pause.	Space-bar: single-step. <br>
+    <canvas id="webgl" width="400" height="400">
+    	Please use a browser that supports "canvas"
+    </canvas> 
+    <p>
+      <button type="button" onclick="onPlusButton()" >++Start</button>
+      <button type="button" onclick="onMinusButton()">--Start</button>
+
+		Open the JavaScript Console, please: <br>
+		(right-click-->'Inspect Element'-->'Console' tab) 
+		Try the 1,2,3 keys on the keyboard, and others too...
+	<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+		 (where? look at the end of 'BouncyBall02.js' at 
+			myKeyPress(), myKeyDown() and myKeyUp() fcns)
+	-->
+		<div id='KeyResult'> Look here... </div>
+		<br>
+		Also, click and drag the mouse in the 'canvas' element above:
+		<div id='MouseResult0'> Then look here... </div> 
+		<div id='MouseResult1'> And look here too... </div> 
+		
+	</p>
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+	<!-- We modified the library cuon-matrix.js from the book 
+		"WebGL Programming Guide"(K. Matsuda, 2013),
+		to add matrix-stack and quaternion capabilities, 
+		and renamed it cuon-matrix-quat.js -->
+    <script src="../lib/cuon-matrix-quat.js"></script> 
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="BouncyBall05.js"></script>
+  </body>
+</html>

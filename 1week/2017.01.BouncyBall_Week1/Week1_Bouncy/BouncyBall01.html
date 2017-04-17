@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BouncyBall01: shaded points</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      <button type="button" onclick="onPlusButton()" >++Start</button>
+      <button type="button" onclick="onMinusButton()">--Start</button>
+			<br><b>BouncyBall01:</b> GLSL fragment shader trick: Points look like spheres...
+    </p>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+	<! We modified the library cuon-matrix.js from the book "WebGL Programming Guide"(K. Matsuda, 2013),
+		to add matrix-stack and quaternion capabilities, and renamed it cuon-matrix-quat.js >
+    <script src="../lib/cuon-matrix-quat.js"></script> 
+    <script src="BouncyBall01.js"></script>
+  </body>
+</html>
